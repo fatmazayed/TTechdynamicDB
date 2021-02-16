@@ -1,0 +1,20 @@
+<div style="border: 1px solid red">Upload Excel Component</div>
+
+<!-- upload -->
+<div class="col-md-6 form-group mb-3">
+  <label>Course Logo</label>
+  <div class="form-group">
+    <app-upload (onUploadFinished)="uploadFinished($event)"
+                (filetype)="sendMessageToParent($event)"></app-upload>
+  </div>
+  <!--<img [src]="Coursedata.response != null ? Coursedata.BaseURL.createImgPath(Coursedata.response.dbPath) : '../../../assets/imgs/default.png'"
+       style="width: 120px; height: 120px;">-->
+</div>
+<!-- btn -->
+<div class="col-md-12">
+  <hr>
+  <button type="submit" class="btn btn-primary text-white float-right">
+    Add
+    course
+  </button>
+</div>

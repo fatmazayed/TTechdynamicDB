@@ -1,0 +1,100 @@
+<div class="register_page w-100">
+  <div class="row">
+    <div class="auth-layout-wrap w-100 reg_body">
+      <div class="auth-content">
+        <div class="card h-100" data-perfect-scrollbar="" data-suppress-scroll-x="true">
+          <div class="row h-100">
+            <div class="col-md-6 text-center logo_block">
+              <div class="pl-3 auth-right">
+                <h2 class="mt-48 text-white">Welcome</h2>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-4 row h-100 align-items-center justify-content-center">
+                <div class="col-12">
+                  <h1 class="mb-3 text-18 text-center text-theme font-size-25">Client Data</h1>
+                  <form (ngSubmit)="onupdate()"    [formGroup]="updateForm"
+                        class="mt-3">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label>Company Name</label>
+                          {{auth.currentUserData.companyName}}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6 col-12">
+                        <div class="form-group">
+                          <label>Name<span class="text-danger">*</span></label>
+                          <input type="text"  
+                                 placeholder="Enter  Name" required spellcheck="false"
+                                 name="Name" maxlength="150"
+                                 class="form-control form-control-sm"
+                                 formControlName="name"
+                                 value=" {{auth.currentUserData.name}}
+">
+                          <!--<div class="validationError"
+               *ngIf="( updateForm.get('Name').touched || isSubmitted) &&  updateForm.get('Name').errors?.required">
+            Name is required
+          </div>-->
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-12">
+        <div class="form-group">
+          <label>Phone<span class="text-danger">*</span></label>
+          <input type="text"  
+                 placeholder="Enter Phone" required spellcheck="false"
+                 name="Phone" maxlength="150"
+                 class="form-control form-control-sm"
+  formControlName="phone"
+                 value=" {{auth.currentUserData.phone}}">
+          <!--<div class="validationError"
+               *ngIf="( updateForm.get('Phone').touched || isSubmitted) &&  updateForm.get('Phone').errors?.required">
+            Phone is required
+          </div>-->
+        </div>
+      </div>
+                    </div>
+                    <div class="row">
+      <div class="col-lg-6 col-12">
+        <div class="form-group">
+          <label>Age<span class="text-danger">*</span></label>
+          <input type="text"  
+                 placeholder="Enter Phone" required spellcheck="false"
+                 name="Age" maxlength="150"
+                 class="form-control form-control-sm"
+  formControlName="age"
+                 value="{{auth.currentUserData.age}}">
+          <!--<div class="validationError"
+               *ngIf="( updateForm.get('Age').touched || isSubmitted) &&  updateForm.get('Age').errors?.required">
+            Age is required 3
+          </div>-->
+        </div>
+      </div>
+    </div>
+                    <div class="row justify-content-center align-items-center">
+                      <div class="col-lg-4 col-12">
+                        <button class="btn btn-primary mt-3 w-100"
+                                type="submit" >
+                          update
+                        </button>
+                      </div>
+                    </div>
+                    <div class="validationError mt-3">
+                      <div [style.visibility]="isHidden ? 'hidden': 'visible'"
+                           class="alert alert-card alert-danger" role="alert">
+                        {{errorMessage}}
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

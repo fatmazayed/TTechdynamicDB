@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj" />
+    <ProjectReference Include="..\Models\Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>C:\Users\fatma\.nuget\packages\microsoft.aspnet.identity.core\2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer">
+      <HintPath>C:\Users\fatma\.nuget\packages\microsoft.aspnetcore.apiauthorization.identityserver\3.1.0\lib\netcoreapp3.1\Microsoft.AspNetCore.ApiAuthorization.IdentityServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore">
+      <HintPath>C:\Users\fatma\.nuget\packages\microsoft.aspnetcore.identity.entityframeworkcore\3.1.0\lib\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore">
+      <HintPath>C:\Users\fatma\.nuget\packages\microsoft.entityframeworkcore\3.1.0\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

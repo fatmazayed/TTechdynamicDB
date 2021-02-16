@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.12.1" />
+    <PackageReference Include="IdentityServer4.EntityFramework" Version="4.1.1" />
+    <PackageReference Include="linq2db.SqlServer" Version="3.2.3" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="1.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="netstandard-System.Data.Linq" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer">
+      <HintPath>C:\Users\fatma\.nuget\packages\microsoft.aspnetcore.apiauthorization.identityserver\3.1.0\lib\netcoreapp3.1\Microsoft.AspNetCore.ApiAuthorization.IdentityServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore">
+      <HintPath>C:\Users\fatma\.nuget\packages\microsoft.aspnetcore.identity.entityframeworkcore\3.1.0\lib\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore">
+      <HintPath>C:\Users\fatma\.nuget\packages\microsoft.entityframeworkcore\3.1.0\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Design">
+      <HintPath>C:\Users\fatma\.nuget\packages\microsoft.entityframeworkcore.design\3.1.0\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.SqlServer">
+      <HintPath>C:\Users\fatma\.nuget\packages\microsoft.entityframeworkcore.sqlserver\3.1.0\lib\netstandard2.0\Microsoft.EntityFrameworkCore.SqlServer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

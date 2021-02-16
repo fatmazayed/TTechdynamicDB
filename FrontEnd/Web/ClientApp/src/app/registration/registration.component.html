@@ -1,0 +1,164 @@
+<div class="register_page w-100">
+  <div class="row">
+    <div class="auth-layout-wrap w-100 reg_body">
+       
+      <div class="auth-content">
+        <div class="card h-100" data-perfect-scrollbar="" data-suppress-scroll-x="true">
+          <div class="row h-100">
+            <div class="col-md-6 text-center logo_block">
+              <div class="pl-3 auth-right">
+                <h2 class="mt-48 text-white">Welcome</h2>
+      
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-4 row h-100 align-items-center justify-content-center">
+                <div class="col-12">
+                  <h1 class="mb-3 text-18 text-center text-theme font-size-25">Register</h1>
+
+                  <form (ngSubmit)="onregister()" [formGroup]="service.registerForm"
+                        autocomplete="off" novalidate>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label>Company Name<span class="text-danger">*</span></label>
+                          <input formControlName="CompanyName"
+                                 placeholder="Company Name" required spellcheck="false"
+                                 maxlength="50" name="CompanyName"
+                                 class="form-control form-control-sm">
+                          <div class="validationError"
+                               *ngIf="(service.registerForm.get('CompanyName').touched || isSubmitted) && service.registerForm.get('CompanyName').errors">
+                            CompanyName is required and min length {{ service.registerForm.get('CompanyName').errors.minlength.requiredLength}}
+                            and max length 
+                          </div>
+                          <div class="validationError"
+                               *ngIf="(service.registerForm.get('CompanyName').touched || isSubmitted) && service.registerForm.get('CompanyName').errors?.CompanyName">
+                            Company Name Formate not Valid
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-6 col-12">
+                        <div class="form-group">
+                          <label>Name<span class="text-danger">*</span></label>
+                          <input type="text" formControlName="Name"
+                                 placeholder="Enter  Name" required spellcheck="false"
+                                 name="Name" maxlength="150"
+                                 class="form-control form-control-sm">
+                          <div class="validationError"
+                               *ngIf="(service.registerForm.get('Name').touched || isSubmitted) && service.registerForm.get('Name').errors?.required">
+                            Name is required
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-12">
+                        <div class="form-group">
+                          <label>Phone<span class="text-danger">*</span></label>
+                          <input type="text" formControlName="Phone"
+                                 placeholder="Enter Phone" required spellcheck="false"
+                                 name="Phone" maxlength="150"
+                                 class="form-control form-control-sm">
+                          <div class="validationError"
+                               *ngIf="(service.registerForm.get('Phone').touched || isSubmitted) && service.registerForm.get('Phone').errors?.required">
+                            Phone is required
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                                    <div class="row">
+                      <div class="col-lg-6 col-12">
+                        <div class="form-group">
+                          <label>Age<span class="text-danger">*</span></label>
+                          <input type="text" formControlName="Age"
+                                 placeholder="Enter Phone" required spellcheck="false"
+                                 name="Age" maxlength="150"
+                                 class="form-control form-control-sm">
+                          <div class="validationError"
+                               *ngIf="(service.registerForm.get('Age').touched || isSubmitted) && service.registerForm.get('Age').errors?.required">
+                            Age is required 3
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="row">
+                      <div class="col-lg-6 col-12">
+                        <div class="form-group">
+                          <label>Password<span class="text-danger">*</span></label>
+                          <input type="password" formControlName="Password"
+                                 placeholder="********" required
+                                 class="form-control form-control-sm">
+                          <div class="validationError"
+                               *ngIf="(service.registerForm.get('Password').touched || isSubmitted) && service.registerForm.get('Password').errors?.required">
+                            Password is required
+                          </div>
+                          <div class="validationError"
+                               *ngIf="(service.registerForm.get('Password').touched || isSubmitted) && service.registerForm.get('Password').errors?.minLength">
+                            Password Must Minimam 4 charchter
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 col-12">
+                        <div class="form-group">
+                          <label>Confirm Password<span class="text-danger">*</span></label>
+                          <input type="password" formControlName="ConfirmPassword"
+                                 placeholder="********" name="ConfirmPassword" required
+                                 class="form-control form-control-sm">
+
+                          <div class="validationError"
+                               *ngIf="(service.registerForm.get('ConfirmPassword').touched || isSubmitted) && service.registerForm.get('ConfirmPassword').errors?.required">
+                            Confirm Password is required
+                          </div>
+                          <div class="validationError"
+                               *ngIf="(service.registerForm.get('ConfirmPassword').touched || isSubmitted) && service.registerForm.get('ConfirmPassword').errors?.passwordMismatch">
+                            Confirm Password does not match
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="row justify-content-center align-items-center">
+                      <div class="col-lg-4 col-12">
+                        <button class="btn btn-primary mt-3 w-100"
+                                type="submit" [disabled]="service.registerForm.invalid">
+                          Register
+                        </button>
+                      </div>
+                    </div>
+                    <div class="validationError mt-3">
+                      <!-- <div [style.visibility]="isHidden ? 'hidden': 'visible'"
+        class="alert alert-card alert-danger" role="alert">
+        {{errorMessage}}
+    </div> -->
+                    </div>
+                    <div class="row justify-content-center align-items-center mt-3">
+                      <div class="col-lg-8 col-12 text-center">
+                        <h6>
+                          <span>Already have an account ?</span>
+                          <a [routerLink]='["/login"]'>
+                            <span>Sign in</span>
+                          </a>
+                        </h6>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                       
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

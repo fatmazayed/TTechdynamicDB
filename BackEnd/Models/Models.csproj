@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Identity">
+      <HintPath>C:\Users\fatma\.nuget\packages\microsoft.aspnetcore.identity\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Identity.Stores">
+      <HintPath>C:\Users\fatma\.nuget\packages\microsoft.extensions.identity.stores\3.1.0\lib\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

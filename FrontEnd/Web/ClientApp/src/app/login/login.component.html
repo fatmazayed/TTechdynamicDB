@@ -1,0 +1,123 @@
+<div class="register_page w-100">
+    <div class="row">
+        <div class="auth-layout-wrap w-100 reg_body">
+            <div class="auth-content">
+                <div class="card h-100" data-perfect-scrollbar data-suppress-scroll-x="true">
+                    <div class="row h-100">
+                        <div class="col-md-6 text-center logo_block">
+                            <div class="pl-3 auth-right">
+                                
+                                <h2 class="mt-48 text-white">Welcome</h2>
+                                <div class="w-100 mb-2 row justify-content-center align-items-center">
+
+                                     
+
+                                </div>
+                                              </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4 row h-100 align-items-center justify-content-center">
+                                <div class="col-12">
+                                    <h1 class="login_title text-18 text-center text-theme font-size-25">Log-in</h1>
+                                    <form (ngSubmit)="loginUser()" [formGroup]="signinForm" novalidate class="mt-3">
+
+                                      <div class="row">
+                                        <div class="col-12">
+                                          <div class="form-group">
+                                            <label>CompanyName</label>
+                                            <input type="text" formControlName="CompanyName"
+                                                   placeholder="Company Name" required spellcheck="false"
+                                                   autocapitalize="off" name="CompanyName" autocomplete="off"
+                                                   class="form-control form-control-sm">
+                                            <!--<div class="validationError"
+                                                 *ngIf="isSubmitted && signinForm.controls.CompanyName.errors">
+                                              <div *ngIf="signinForm.controls.CompanyName.errors.required">
+                                                CompanyName is
+                                                required
+                                              </div>
+                                            </div>-->
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-12">
+                                          <div class="form-group">
+                                            <label>Name</label>
+                                            <input  formControlName="Name"
+                                                   placeholder="Name" required autocomplete="off"
+                                                   class="form-control form-control-sm">
+                                            <div class="validationError"
+                                                 *ngIf="isSubmitted && signinForm.controls.Name.errors">
+                                              <div *ngIf="signinForm.controls.Name.errors.required">
+                                                Name is required
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="row">
+                                        <div class="col-12">
+                                          <div class="form-group">
+                                            <label>Password</label>
+                                            <input type="password" formControlName="password"
+                                                   placeholder="Password" required autocomplete="off"
+                                                   class="form-control form-control-sm">
+                                            <div class="validationError"
+                                                 *ngIf="isSubmitted && signinForm.controls.password.errors">
+                                              <div *ngIf="signinForm.controls.password.errors.required">
+                                                Password is required
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="row">
+                                        <div class="col-lg-6 col-12">
+                                          <label class="checkbox checkbox-primary">
+                                            <input type="checkbox" (change)="setchange($event)" />
+                                            <span>Remember me </span>
+                                            <span class="checkmark"></span>
+                                          </label>
+                                        </div>
+                                        <div class="col-lg-6 col-12 text-right">
+                                          <a [routerLink]='["/forgetpassword"]' class="text-decoration-underline">
+                                            <span>Forget Password ?</span>
+                                          </a>
+                                        </div>
+                                      </div>
+
+                                      <div class="row justify-content-center align-items-center">
+                                        <div class="col-lg-4 col-12">
+                                          <button class="btn btn-primary mt-3 w-100" type="submit">Login</button>
+                                        </div>
+                                      </div>
+                                      <!-- <div class="validationError mt-3">
+     <div [style.visibility]="isHidden ? 'hidden': 'visible'" class="alert alert-card alert-danger" role="alert">
+          {{errorMessage}}
+      </div>
+  </div> -->
+
+                                      <div class="row mt-3">
+                                        <div class="col-lg-6 col-12">
+                                          <a [routerLink]='["/register"]' class="text-decoration-underline">
+                                            <span>Create a new account.</span>
+                                          </a>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                          <a routerLink="/" class="float-right text-decoration-underline">
+                                            <span>Back To Home</span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
